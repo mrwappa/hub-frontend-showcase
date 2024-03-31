@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>The Test Page</title>
+</head>
+
+<body>
+
+	<div class="sensefarm-widget" data-uid="4776E6ED001E0025" data-sensor="temperature" data-title="Temperature"></div>
+	<div class="sensefarm-widget" data-uid="4776E6ED001E0025" data-sensor="humidity" data-title="Humidity"></div>
+	<script type="text/javascript">
+		(function () {
+			var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://localhost:3000/widget/widget.js';
+			var l = document.createElement('link'); l.type = 'text/css'; l.rel = 'stylesheet'; l.href = 'http://localhost:3000/widget/widget.css';
+			var head = document.getElementsByTagName('head')[0]; head.appendChild(s); head.appendChild(l);
+		})();
+	</script>
+
+</body>
+
+</html>

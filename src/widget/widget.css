@@ -1,0 +1,24 @@
+.sensefarm-widget {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  min-width: 120px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  display: inline-block;
+  text-align: center;
+}
+
+.sensefarm-widget .widget-title {
+  font-size: 16px;
+}
+
+.sensefarm-widget .widget-value {
+  display: block;
+  margin: 8px 0;
+  font-size: 28px;
+}
+
+.sensefarm-widget .widget-logo img {
+  width: 80%;
+  max-width: 100px;
+}

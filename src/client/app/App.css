@@ -1,0 +1,363 @@
+@import '~semantic-ui-css/semantic.css';
+@import '~lato-font/css/lato-font.css';
+@import '~font-awesome/css/font-awesome.css';
+/*Todo: should these be imported on the components they are used, or still just inside here?*/
+@import '~react-toastify/dist/ReactToastify.css';
+@import '~react-phone-input-2/lib/style.css';
+@import '~react-day-picker/lib/style.css';
+@import '~react-datepicker/dist/react-datepicker.css';
+
+@import url('./ReactTelInput.css');
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #F0F0F0;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.announcement {
+  border-radius: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  flex: 0 0 auto;
+}
+
+#root {
+  height: 100%;
+}
+
+.fullHeight {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.mainContent {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+}
+
+.pageContainer {
+  display: flex !important;
+  flex-flow: column;
+  flex: 1 0 auto;
+  overflow-x: hidden;
+}
+
+.pageContainer:not(.fluid)  {
+  padding-top: 1rem !important;
+}
+
+@media (max-width:768px) {
+
+  .mainContent.manualShow {
+    margin-right: -200px;
+  }
+
+  .mainContent > .container {
+    margin: 0 !important;
+  }
+
+  .drawer {
+    display: none;
+  }
+
+  .overviewFilter .row.buttonRow {
+    display: none;
+  }
+
+  .overviewFilter .row.expandToggleRow  {
+    display: block !important;
+    cursor: pointer;
+  }
+
+  .menuToggle {
+    display: inline !important;
+  }
+
+  .pageHeader.manualShow h1 {
+    display: none !important;
+  }
+
+  .userMenuDropdown .ui.mini.image {
+    display: none !important;
+  }
+
+}
+
+.overviewFilter.expanded .row.buttonRow {
+  display: block;
+}
+
+.overviewFilter .row.expandToggleRow  {
+  display: none;
+}
+
+.drawer.manualShow {
+  display: block;
+}
+
+.menuToggle {
+  display: none;
+}
+
+.drawer {
+  background-color: rgb(45, 48, 49);
+  width: 200px;
+  flex: 0 0 auto;
+}
+
+.drawer > img {
+  margin-top: 30px;
+}
+
+.drawer ul {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.drawer ul > li {
+  display: block;
+  margin: 5px 0;
+}
+
+.drawer ul > li i {
+  width: 1.8em;
+  text-align: center;
+}
+
+.drawer ul > li > a {
+  color: #FFF;
+  padding: 10px 15px;
+  font-size: 1.1em;
+  font-weight: 400;
+  display: block;
+}
+
+.drawer ul > li > a:hover {
+  color: #d4d5da;
+  background-color: #2a3a49;
+}
+
+.drawer ul > li > a.active {
+  color: #21BA45;
+}
+
+.headerBox {
+  background-color: #FFF;
+  position: fixed;
+  padding: 5px;
+  width: 750px;
+  top: 0;
+  right: 0;
+  height: 50px;
+  border-bottom: 1px solid #EEE;
+  border-left: 1px solid #EEE;
+}
+
+/* .headerImage {
+  margin-bottom: 0 !important;
+  height: 2em;
+} */
+
+.pulldown {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer {
+  flex: 0 0 auto;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+  padding: 0 1em;
+  overflow: hidden;
+  text-align: right;
+}
+
+.accountPicture {
+  height: 6em;
+  width: 6em;
+  margin: 0;
+  position: relative;
+  border-radius: 0.3125em;
+  overflow: hidden;
+}
+
+.accountPicture > img {
+  height: 100%;
+  width: 100%;
+}
+
+.accountPicture > a {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding-top: 1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 50%;
+  opacity: 0;
+  text-align: center;
+}
+
+.accountPicture > a:hover {
+  opacity: 1;
+}
+
+.notifierBell {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.notifierPopup.ui.popup {
+  padding: 0px !important;
+}
+
+.notifierPopup.ui.popup:before {
+  z-index: -1 !important;
+}
+
+.notifierPopup.ui.popup .event {
+  padding: 1em !important;
+}
+
+.notifierPopup.ui.popup .event:first-child {  
+  border-top-right-radius: 0.285714rem;
+  border-top-left-radius: 0.285714rem;
+}
+
+.notifierPopup.ui.popup .event:last-child {  
+  border-bottom-right-radius: 0.285714rem;
+  border-bottom-left-radius: 0.285714rem;
+}
+
+.notifierPopup.ui.popup .event:hover {
+  cursor: pointer;
+}
+
+#specialCaseEvent {
+  padding-right: 0em !important;
+  cursor: auto !important;
+}
+#specialCaseOtherEvent {
+  padding-left: 5px !important;
+}
+#specialCaseOtherEvent:hover {
+  background-color: #c0bebe !important;
+  margin-left: -3px !important;
+}
+
+.notifierPopup.ui.popup .date {
+  margin: 0 !important;
+}
+
+.pageHeader {
+  flex: 0 0 auto;
+  margin-bottom: 0px !important;
+  border-bottom: 0px !important; 
+  padding: 0.5em !important;
+}
+
+.pageHeader h1 {
+  font-size: 22px;
+}
+
+.pageHeader table {
+  width: 100%;
+  margin: 0;
+}
+
+.react-datepicker-wrapper, .react-datepicker-wrapper div {
+  display: block;
+}
+
+td.collapsing {
+  width: 1px;
+  white-space: nowrap;
+}
+
+.pageHeader .headerTitle {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 !important;
+  line-height: 100%;
+  font-size: 24px;
+  height: auto;
+}
+
+.userMenuDropdown {
+  text-align: left;
+}
+
+.userMenuDropdown a {
+  text-decoration: none;
+  color: #000 !important;
+}
+
+.userMenuDropdown.ui.dropdown .menu {
+  left: auto;
+  right: 0px;
+}
+
+.userMenuTrigger > span {
+  font-size: 14px !important;
+  line-height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 300;
+  margin-left: 4px;
+  margin-right: 8px;
+}
+
+.userMenuTrigger > span > h1 {
+  font-size: 14px;
+  font-weight: 400; 
+}
+
+/* --- Hide spinner on number inputs --- */
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ------------------------------------- */
+
+.field .ui.label {
+  margin: 0.142857em !important;
+}
+
+
+/* Customising the Clustered Markers */
+.marker-cluster-custom {
+  background: #4682B4;
+  border: 1px solid #ededed;
+  border-radius: 50%;
+  color: #ededed;
+  height: 40px;
+  line-height: 37px;
+  text-align: center;
+  width: 40px;
+}
