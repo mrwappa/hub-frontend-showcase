@@ -1,4 +1,4 @@
-This project is solely transported over to GitHub to showcase frontend code that I've worked on to employers.
+This project is solely transported over to GitHub to for employer showcase (frontend code)
 
 Could not upload my backend work for security reasons :(
 
